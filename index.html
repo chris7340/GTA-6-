@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTA6 Viral Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background: url('gta6-banner.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 4rem;
+      text-shadow: 2px 2px 8px #000;
+    }
+    .countdown {
+      font-size: 2rem;
+      margin-top: 20px;
+      color: #ff0066;
+    }
+    nav {
+      background: #111;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    .cta {
+      background: #ff0066;
+      padding: 15px 30px;
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    footer {
+      background: #111;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Vice City 2.0</h1>
+    <div class="countdown" id="countdown">Trailer drops in: 10d 5h 30m</div>
+    <button class="cta">Join the Crew</button>
+  </header>
+
+  <nav>
+    <a href="#news">News</a>
+    <a href="#memes">Memes</a>
+    <a href="#community">Community</a>
+  </nav>
+
+  <section id="news">
+    <h2>🔥 Latest GTA6 News</h2>
+    <p>Rumors, leaks, and Rockstar updates all in one place.</p>
+  </section>
+
+  <section id="memes">
+    <h2>😂 Meme Hub</h2>
+    <p>Upload and share GTA6 memes to go viral.</p>
+  </section>
+
+  <section id="community">
+    <h2>💬 Community Chat</h2>
+    <p>Join discussions, polls, and fan theories.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 GTA6 Viral Hub | Built for fans</p>
+  </footer>
+
+  <script>
+    // Simple countdown script
+    const countdownEl = document.getElementById('countdown');
+    const targetDate = new Date("Oct 15, 2026 18:00:00").getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000*60*60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000*60));
+
+      countdownEl.innerHTML = `Trailer drops in: ${days}d ${hours}h ${minutes}m`;
+    }, 1000);
+  </script>
+</body>
+</html>
